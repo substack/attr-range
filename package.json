@@ -1,0 +1,31 @@
+{
+  "name": "attr-range",
+  "version": "0.0.0",
+  "description": "find ranges for wiring up live automatically updating collections",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "~2.3.2"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substack/attr-range.git"
+  },
+  "homepage": "https://github.com/substack/attr-range",
+  "keywords": [
+    "data-start",
+    "data-end",
+    "data-key",
+    "atttractor",
+    "attr"
+  ],
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "license": "MIT"
+}
