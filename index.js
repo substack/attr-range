@@ -1,20 +1,21 @@
 module.exports = function (cb) {
-    return function (elem, startKey) {
-        var endKey = startKey.replace(/-start$/, 'end');
-        var dataKey = startKey.replace(/-start$/, 'data');
-        
-        var range = {
-            start: elem.getAttribute(startKey),
-            end: elem.getAttribute(endKey),
-        };
-        cb({
-            start: range.start,
-            end: range.end,
-            range: range,
-            element: elem,
-            query: function (key) {
-                return elem.querySelector('*[' + dataKey + '="' + key + '"]');
+    return function (elem, start, end) {
+        if (!end) {
+            var props = elem.properties || [];
+            for (var i = 0; i < props.length; i++) {
+                if (props[i].value === start) {
+                    var startKey = props[i].name;
+                    var endKey = startKey.replace(/(^|-)start$/, 'end');
+                    elem.getAttribute(endKey);
+                }
             }
+        }
+        
+        cb({
+            start: start,
+            end: end,
+            range: { start: start, end: end },
+            element: elem
         });
     };
 };
