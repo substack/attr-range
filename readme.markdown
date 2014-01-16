@@ -33,7 +33,6 @@ range objects have:
 * `range.range` - object with only `start` and `end` keys; useful for handing to
 `db.createReadStream()`
 * `range.element` - container element for all the items in the range
-* `range.query(key)` - query for a data-key element by its key
 
 ## rangef(elem, attrName)
 

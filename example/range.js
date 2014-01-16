@@ -1,6 +1,6 @@
 var arange = require('../');
 var rangef = arange(function (range) {
-    // ...
+    console.log(range);
 });
 
 var elems = document.querySelectorAll('*[data-start]');
