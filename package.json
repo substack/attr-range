@@ -1,6 +1,6 @@
 {
   "name": "attr-range",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "find ranges for wiring up live automatically updating collections",
   "main": "index.js",
   "dependencies": {},
