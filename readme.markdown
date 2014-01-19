@@ -7,12 +7,12 @@ find ranges for wiring up live automatically updating collections
 ``` js
 var arange = require('attr-range');
 var rangef = arange(function (range) {
-    // ...
+    console.log(range);
 });
 
 var elems = document.querySelectorAll('*[data-start]');
 for (var i = 0; i < elems.length; i++) {
-    rangef(elems[i], 'data-start');
+    rangef(elems[i]);
 }
 ```
 
@@ -22,7 +22,7 @@ for (var i = 0; i < elems.length; i++) {
 var arange = require('attr-range');
 ```
 
-## var rangef = arange(function (range) {})
+## var rangef = arange(start='data-start', end='data-end', function (range) {})
 
 Register a callback to fire when range elements have been gathered.
 
@@ -34,13 +34,10 @@ range objects have:
 `db.createReadStream()`
 * `range.element` - container element for all the items in the range
 
-## rangef(elem, attrName)
+## rangef(elem)
 
-Call the `rangef()` function on each element `elem` and data attribute name
-`attrName` you want to construct range objects for.
-
-Data items in the range should have the same name as `attrName` except that the
-trailing `-start` should be `-data`.
+Call the `rangef()` function on each element `elem` that has the start and end
+keys to populate the callback with.
 
 # install
 
