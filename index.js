@@ -1,5 +1,5 @@
 module.exports = function (kstart, kend, cb) {
-    if (typeof start === 'object') {
+    if (typeof kstart === 'object') {
         cb = kend;
         kend = kstart.end;
         kstart = kstart.start;
